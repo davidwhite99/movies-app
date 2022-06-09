@@ -12,7 +12,7 @@ Meteor.methods({
             title:movieTitle,
             releaseYear:movieYear,
             isWatched:false, 
-            rating:0.0, 
+            rating:"0", 
             createdAt:new Date()
         })
 
@@ -23,12 +23,6 @@ Meteor.methods({
             throw new Meteor.Error('No Such Movie');
         }
         MoviesCollection.remove(movieId);
-    },
-
-    'movies.edit'(movieId){
-        const movie = MoviesCollection.findOne({_id: movieId});
-        console.log("Editing movie " + movie.title  + " now");
-        MoviesCollection.update({_id: movieId}, )
     },
 
     'movies.onRate'(movieId, newRating){

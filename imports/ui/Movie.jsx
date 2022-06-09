@@ -30,7 +30,6 @@ export const Movie = ({ movie, onEditClick, onRateClick, onDeleteClick}) => {
                 />
                 <button type="submit">Rate</button>
             </form>
-            <button type="button" onClick={ () => onEditClick(movie) }>Edit</button>
             
             <button type="button" onClick={ () => onDeleteClick(movie) }>Delete</button>
         </li>
